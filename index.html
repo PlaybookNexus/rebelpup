@@ -1,87 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nexus Playbook</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RebelPup</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
       color: #333;
     }
-
     header {
-      background-color: #222;
+      background: #222;
       color: #fff;
-      padding: 1em;
+      padding: 2rem;
       text-align: center;
     }
-
-    .cta {
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #ccc;
+      text-decoration: none;
+    }
+    .hero {
       text-align: center;
-      padding: 2em;
-      background-color: #f9f9f9;
+      padding: 3rem 2rem;
+      background: #fff;
     }
-
-    .cta h3 {
-      margin-bottom: 1em;
-      font-size: 1.8em;
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .products {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .products h3 {
+      text-align: center;
+      color: #0077cc;
+    }
+    .product-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .product {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .product h4 {
+      margin: 0 0 0.5rem;
+      color: #0077cc;
+    }
+    .product a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .about, .cta {
+      padding: 2rem;
+      text-align: center;
+    }
     .cta a {
       display: inline-block;
       margin: 0.5em;
-      padding: 0.6em 1em;
+      padding: 0.75rem 1.5rem;
+      background: #0077cc;
+      color: #fff;
       text-decoration: none;
-      color: #333;
-      border: 1px solid #ccc;
       border-radius: 5px;
-      transition: background-color 0.3s, color 0.3s;
     }
-
     .cta a i {
       margin-right: 0.5em;
     }
-
-    .cta a:hover {
-      background-color: #333;
-      color: #fff;
-    }
-
     footer {
       background-color: #222;
       color: #fff;
       text-align: center;
       padding: 1em 0;
     }
-
     .social-links {
       margin-top: 0.5em;
     }
-
     .social-links a {
       margin: 0 0.5em;
       color: #fff;
       font-size: 1.5em;
       transition: color 0.3s;
     }
-
     .social-links a:hover {
       color: #00aced;
     }
-
     @media (max-width: 600px) {
+      .product-list {
+        grid-template-columns: 1fr;
+      }
       .cta a {
         display: block;
         margin: 0.5em auto;
-      }
-
-      .social-links a {
-        font-size: 1.2em;
       }
     }
   </style>
@@ -89,9 +121,49 @@
 <body>
 
   <header>
-    <h1>Welcome to Nexus Playbook</h1>
-    <p>Join the creative rebellion 🐾</p>
+    <h1>🐾 RebelPup</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
+
+  <section class="hero">
+    <h2>Automation for Dogs. Intelligence for Humans.</h2>
+    <p>RebelPup creates smart systems that train, reward, and interact with your dog — so you can focus on the bond, not the hassle.</p>
+  </section>
+
+  <section class="products" id="products">
+    <h3>Our Products</h3>
+    <div class="product-list">
+      <div class="product">
+        <h4>RebelGate</h4>
+        <p>Smart gate that calls your dog, dispenses a treat, and controls access.</p>
+        <a href="https://gate.rebelpup.ca" target="_blank">Visit RebelGate</a>
+      </div>
+      <div class="product">
+        <h4>RebelDog</h4>
+        <p>Mid-size robotic dog with servo-powered mobility and intelligent behavior.</p>
+        <a href="https://dog.rebelpup.ca" target="_blank">Visit RebelDog</a>
+      </div>
+      <div class="product">
+        <h4>RebelFeeder</h4>
+        <p>Automated food dispenser with smart scheduling and remote control.</p>
+        <a href="https://feeder.rebelpup.ca" target="_blank">Visit RebelFeeder</a>
+      </div>
+      <div class="product">
+        <h4>RebelSense</h4>
+        <p>Sensor network for motion, bark detection, and location awareness.</p>
+        <a href="https://sensors.rebelpup.ca" target="_blank">Visit RebelSense</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h3>Why RebelPup?</h3>
+    <p>We believe dogs deserve more than basic obedience — they deserve intelligent interaction. RebelPup blends robotics, automation, and behavioral science to create tools that enhance training, deepen connection, and make life easier for both dogs and humans.</p>
+  </section>
 
   <section class="cta" id="contact">
     <h3>Ready to Join the Pack?</h3>
@@ -116,7 +188,7 @@
   </section>
 
   <footer>
-    <p>© 2025 Nexus Playbook. All rights reserved.</p>
+    <p>© 2025 RebelPup — A Playbook Nexus Project</p>
     <div class="social-links">
       <a href="https://x.com/NexusPlaybook" target="_blank"><i class="fab fa-x-twitter"></i></a>
       <a href="https://www.linkedin.com/company/102006235" target="_blank"><i class="fab fa-linkedin"></i></a>
