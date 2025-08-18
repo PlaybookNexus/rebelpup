@@ -6,9 +6,8 @@
   <title>RebelPup</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: #f9f9f9;
       color: #333;
     }
@@ -18,26 +17,68 @@
       padding: 2rem;
       text-align: center;
     }
-    h1 {
+    header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin: 0;
     }
-    p.tagline {
-      font-size: 1.2rem;
-      font-style: italic;
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
       color: #ccc;
+      text-decoration: none;
     }
-    section {
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: #fff;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .products {
       padding: 2rem;
       max-width: 800px;
       margin: auto;
     }
-    h2 {
+    .products h3 {
+      text-align: center;
       color: #0077cc;
     }
-    a.button {
+    .product-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .product {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .product h4 {
+      margin: 0 0 0.5rem;
+      color: #0077cc;
+    }
+    .product a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .about, .cta {
+      padding: 2rem;
+      text-align: center;
+    }
+    .cta a {
       display: inline-block;
-      margin: 1rem 0;
+      margin: 1rem;
       padding: 0.75rem 1.5rem;
       background: #0077cc;
       color: #fff;
@@ -45,45 +86,73 @@
       border-radius: 5px;
     }
     footer {
+      background: #eee;
       text-align: center;
       padding: 1rem;
-      background: #eee;
       font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .product-list {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>🐾 RebelPup</h1>
-    <p class="tagline">Building the future of robotic pets</p>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About RebelPup</h2>
-    <p>
-      RebelPup is an experimental brand under <strong>Playbook Nexus</strong>, exploring the intersection of robotics, pet care, and smart environments. At its heart is a prototype robotic dog — a platform for testing ideas, behaviors, and technologies that could redefine how we interact with companion animals.
-    </p>
+  <section class="hero">
+    <h2>Automation for Dogs. Intelligence for Humans.</h2>
+    <p>RebelPup creates smart systems that train, reward, and interact with your dog — so you can focus on the bond, not the hassle.</p>
+  </section>
 
-    <h2>Meet the Robot Dog</h2>
-    <p>
-      Our custom-built robot dog combines Raspberry Pi, Arduino, and sensor arrays to simulate motion, awareness, and interaction. It’s a playground for innovation — from smart zone detection to behavior tracking and remote training.
-    </p>
+  <section class="products" id="products">
+    <h3>Our Products</h3>
+    <div class="product-list">
+      <div class="product">
+        <h4>RebelGate</h4>
+        <p>Smart gate that calls your dog, dispenses a treat, and controls access.</p>
+        <a href="https://gate.rebelpup.ca" target="_blank">Visit RebelGate</a>
+      </div>
+      <div class="product">
+        <h4>RebelDog</h4>
+        <p>Mid-size robotic dog with servo-powered mobility and intelligent behavior.</p>
+        <a href="https://dog.rebelpup.ca" target="_blank">Visit RebelDog</a>
+      </div>
+      <div class="product">
+        <h4>RebelFeeder</h4>
+        <p>Automated food dispenser with smart scheduling and remote control.</p>
+        <a href="https://feeder.rebelpup.ca" target="_blank">Visit RebelFeeder</a>
+      </div>
+      <div class="product">
+        <h4>RebelSense</h4>
+        <p>Sensor network for motion, bark detection, and location awareness.</p>
+        <a href="https://sensors.rebelpup.ca" target="_blank">Visit RebelSense</a>
+      </div>
+    </div>
+  </section>
 
-    <h2>SmartPaws MVP</h2>
-    <p>
-      <strong>SmartPaws</strong> is our first software experiment: a smart zone manager that helps pets stay safe and engaged. It’s currently in MVP stage and lives inside the RebelPup GitHub repo.
-    </p>
-    <a class="button" href="https://github.com/PlaybookNexus/rebelpup" target="_blank">View GitHub Repo</a>
+  <section class="about" id="about">
+    <h3>Why RebelPup?</h3>
+    <p>We believe dogs deserve more than basic obedience — they deserve intelligent interaction. RebelPup blends robotics, automation, and behavioral science to create tools that enhance training, deepen connection, and make life easier for both dogs and humans.</p>
+  </section>
 
-    <h2>Shop & Support</h2>
-    <p>
-      We’re also experimenting with physical products and accessories. Visit our Etsy shop to see what’s available and support the journey.
-    </p>
-    <a class="button" href="https://playbooknexus.etsy.com" target="_blank">Visit Etsy Shop</a>
+  <section class="cta" id="contact">
+    <h3>Ready to Join the Pack?</h3>
+    <a href="mailto:hello@rebelpup.ca">Contact Us</a>
+    <a href="https://playbooknexus.etsy.com" target="_blank">Visit Our Shop</a>
+    <a href="https://github.com/PlaybookNexus/rebelpup" target="_blank">View GitHub Repo</a>
   </section>
 
   <footer>
-    &copy; 2025 Playbook Nexus — RebelPup is a concept brand in development.
+    &copy; 2025 RebelPup — A Playbook Nexus Project
   </footer>
 </body>
 </html>
